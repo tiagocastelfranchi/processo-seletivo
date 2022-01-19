@@ -1,7 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+:root {
+    /* Colors */
+    /* Primary */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    /* Neutral */
+    --very-pale-blue: hsl(228, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    /* Font Sizes */
+    --font-size-paragraph: 16px;
+    /* Font Families */
+    --font-family: 'Red Hat Display', sans-serif;
+    /* Font Weights */
+    --bold: 500;
+    --bolder: 700;
+    --boldest: 900;
+}
+
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-    padding-top: 50px;
+    height: 100vh;
+    width: 100%;
+    background: url('./images/pattern-background-desktop.svg') no-repeat var(--pale-blue);
+    background-size: 100% auto;
+    background-position: top center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+}
+
+.card {
+    width: 450px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 50px 100px -55px rgba(26, 12, 179, 0.3);
 }
 
 .divlogin {
@@ -13,17 +49,24 @@ body{
     margin: auto;
 }
 
-div.botoes {
-    display: flex;
-    justify-content: space-around;
+button {
+    border: 0;
+    background-color: var(--bright-blue);
+    border-radius: 13px;
+    width: 100%;
+    color: white;
+    font-size: 15px;
+    box-shadow: 0px 15px 30px -1px rgba(56, 41, 224, 0.3);
+    height: 50px;
+    font-weight: var(--boldest);
+    font-family: var(--font-family);
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 #cadastro{
-    display: inline-block;
-    position: relative;
-    padding-right: 50px;
-    background-color: transparent;
-    border: none;
-    color: rgb(0, 0, 189);
-    text-decoration: underline;
+    margin-top: 15px;
+    font-weight: var(--boldest);
+    color: var(--desaturated-blue);
+    cursor: pointer;
 }
