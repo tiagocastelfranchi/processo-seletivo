@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
 :root {
     /* Colors */
     /* Primary */
     --pale-blue: hsl(225, 100%, 94%);
     --bright-blue: hsl(245, 75%, 52%);
     /* Neutral */
-    --very-pale-blue: hsl(228, 100%, 98%);
+    --very-pale-blue: hsla(231, 100%, 96%, 0.336);
     --desaturated-blue: hsl(224, 23%, 55%);
     --dark-blue: hsl(223, 47%, 23%);
     /* Font Sizes */
@@ -18,7 +18,15 @@
     --boldest: 900;
 }
 
-body{
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
     height: 100vh;
     width: 100%;
     background: url('./images/pattern-background-desktop.svg') no-repeat var(--pale-blue);
@@ -40,20 +48,70 @@ body{
     box-shadow: 0px 50px 100px -55px rgba(26, 12, 179, 0.3);
 }
 
-.divlogin {
-    width: 450px;
-    border: 2px solid black;
-    height: 450px;
+.card-info {
+    background-color: white;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+h2 {
+    color: var(--dark-blue);
+    font-weight: var(--boldest);
+}
+
+p {
+    max-width: 300px;
+    line-height: 25px;
     text-align: center;
-    background-color: rgb(231, 231, 231);
-    margin: auto;
+    color: var(--desaturated-blue);
+}
+
+.container {
+    padding: 20px;
+    background-color: var(--very-pale-blue);
+    display: flex;
+    width: 90%;
+    align-items: center;
+    border-radius: 10px;
+    height: 90px;
+    box-shadow: 1px 1px 2px 0px rgba(56, 41, 224, 0.3);
+}
+
+.plan-container {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+    height: 100%;
+    padding-bottom: 10px;
+}
+
+.plan-container-2 {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+    height: 100%;
+    padding-bottom: 10px;
+}
+
+input {
+    width: 220px;
+    margin-left: 40px;
+    
 }
 
 button {
     border: 0;
     background-color: var(--bright-blue);
     border-radius: 13px;
-    width: 100%;
+    width: 60%;
     color: white;
     font-size: 15px;
     box-shadow: 0px 15px 30px -1px rgba(56, 41, 224, 0.3);
@@ -64,9 +122,27 @@ button {
     margin-top: 10px;
 }
 
-#cadastro{
+.cadastro {
     margin-top: 15px;
     font-weight: var(--boldest);
     color: var(--desaturated-blue);
     cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(245deg 85% 66%);
+}
+
+a:hover {
+    color: hsl(245deg 85% 66%);
+}
+
+.cancel:hover {
+    color: var(--dark-blue);
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background: url('./images/pattern-background-mobile.svg') no-repeat var(--pale-blue);
+    }
 }

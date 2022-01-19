@@ -3,24 +3,35 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastre-se</title>
     <link rel="stylesheet" href="style.css">
+    <title>Página de Cadastro</title>
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
 </head>
 
 <body>
-    <div class="divlogin">
-        <br>
-        <h1>Meus albúns de fotos</h1>
-        <p></p>
-        <p>Faça seu cadastro:</p>
-        <input type="email" placeholder="E-mail" id="email"> <br><br>
-        <input type="password" placeholder="Senha" id="senha"><br><br>
-        <input type="password" placeholder="Senha" id="senha"><br><br>
-        <div id="botoes">
-            <button id="cadastro"> <a href="index.html">Cancelar</a></button>
-            <button id="entrar">Concluir</button>
+    <div class="card">
+        <div class="card-info">
+            <h2>Meus álbuns de fotos</h2>
+            <p>Faça seu cadastro.</p>
+            <div class="container">
+                <div class="plan-contain-2">
+                    <input type="text" placeholder="  Nome completo">
+                    <input type="email" placeholder="  E-mail"></input>
+                    <input type="password" placeholder="  Senha"></input>
+                </div>
+            </div>
+            <button>Cadastrar</button>
+            <a class="cadastro" href="index.html">Cancelar</a>
         </div>
     </div>
 </body>
